@@ -11,8 +11,21 @@
    Base styles: opinionated defaults
    ========================================================================== */
 
+/* ROOT COLORS */
+:root {
+  --main-text: #222;
+  --select-background: #b3d4fc;
+  --green: #006b35;
+  --blue: #29b7ff;
+  --black: #000;
+  --white: #fff;
+  --gray: #999;
+  --red: #df0000;
+  --gold: #ffc800;
+  --light-gray: #e6e6e6;
+}
 html {
-  color: #222;
+  color: var(--main-text);
   font-size: 1em;
   font-family: sans-serif;
   line-height: 1.4;
@@ -29,12 +42,12 @@ html {
  */
 
 ::-moz-selection {
-  background: #b3d4fc;
+  background: var(--select-background);
   text-shadow: none;
 }
 
 ::selection {
-  background: #b3d4fc;
+  background: var(--select-background);
   text-shadow: none;
 }
 
@@ -120,7 +133,7 @@ textarea {
 /* Bigger than 1000 */
 @media (min-width: 1000px) {
   .hero-heading {
-    font-size: 3.0rem;
+    font-size: 3rem;
   }
   .container {
     padding: 1rem 2rem;
@@ -128,7 +141,7 @@ textarea {
 }
 
 .faq {
-  background: rgb(0, 107, 53);
+  background: var(--green);
   text-align: left;
   color: white;
 }
@@ -148,7 +161,7 @@ textarea {
 .join {
   /* background: rgba(1, 93, 6, 0.5); -- doug green */
 
-  background: rgb(41, 183, 255);
+  background: var(--blue);
   text-align: left;
 }
 
@@ -267,8 +280,8 @@ textarea {
   *,
   *::before,
   *::after {
-    background: #fff !important;
-    color: #000 !important;
+    background: var(--white) !important;
+    color: var(--black) !important;
     /* Black prints faster */
     box-shadow: none !important;
     text-shadow: none !important;
@@ -302,7 +315,7 @@ textarea {
 
   pre,
   blockquote {
-    border: 1px solid #999;
+    border: 1px solid var(--gray);
     page-break-inside: avoid;
   }
 
@@ -331,4 +344,3 @@ textarea {
     page-break-after: avoid;
   }
 }
-
